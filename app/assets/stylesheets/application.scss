@@ -1,0 +1,7 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// CSSの作成で下記３行を追加
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'custom';

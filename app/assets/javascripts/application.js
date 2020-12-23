@@ -10,7 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+// アラートメッセージ表示５秒後に消える、下記１行を追加
+//= require jquery
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+// 下記２行を追加
+//= require bootstrap-sprockets
+//= require_tree .
 //= require_tree .

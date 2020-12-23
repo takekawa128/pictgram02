@@ -5,11 +5,25 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+<!--下記２行の意味不明、要確認-->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <!--下記３行、登録後のフィードバック表示-->
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+    <% end %>
+    
     <%= yield %>
+    
+    <!--下記３行、表示後５秒でフォードアウト-->
+    <script>
+      $(functiopn(){
+        $(".alert").fadeOut(5000);
+      });
+    </script>
+    
   </body>
 </html>
